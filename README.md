@@ -1,14 +1,14 @@
-# Cog Open-Assistant SFT-1 12B
+# Cog databricks/dolly-v2-7b
 
-This repository is an implementation of [Open-Assistant SFT-1 12B](https://huggingface.co/OpenAssistant/oasst-sft-1-pythia-12b) as a Cog model. [Cog packages machine learning models as standard containers.](https://github.com/replicate/cog). 
+This repository is an implementation of [databricks/dolly-v2-7b](https://huggingface.co/databricks/dolly-v2-7b) as a Cog model. [Cog packages machine learning models as standard containers.](https://github.com/replicate/cog).
 
-# Prerequisites 
+# Prerequisites
 
-* Model weights.
+- Model weights.
 
-* GPU machine. You'll need a Linux machine with an NVIDIA GPU attached and the NVIDIA Container Toolkit installed. If you don't already have access to a machine with a GPU, check out our guide to getting a GPU machine. This codebase currently assumes a single device with sufficient VRAM (>24GB) is available. If, instead, you have access to a multi-device environment, you can modify the code to distribute your model across devices. 
+- GPU machine. You'll need a Linux machine with an NVIDIA GPU attached and the NVIDIA Container Toolkit installed. If you don't already have access to a machine with a GPU, check out our guide to getting a GPU machine. This codebase currently assumes a single device with sufficient VRAM (>24GB) is available. If, instead, you have access to a multi-device environment, you can modify the code to distribute your model across devices.
 
-* Docker. You'll be using the Cog command-line tool to build and push a model. Cog uses Docker to create containers for models.
+- Docker. You'll be using the Cog command-line tool to build and push a model. Cog uses Docker to create containers for models.
 
 ## Step 0: Install Cog
 
@@ -39,12 +39,11 @@ chmod +x ./scripts/tensorize_model.py
 cog run ./scripts/tensorize_model.py
 ```
 
-This will load the model in fp16 and then use `tensorizer` to export it to `./tensorized_models/oasst-sft-1-pythia-12b.tensors`. 
+This will load the model in fp16 and then use `tensorizer` to export it to `./tensorized_models/oasst-sft-1-pythia-12b.tensors`.
 
 To use these weights, comment out `tensorized_models` in `.dockerignore` and set `PATH_TO_TENSORIZER_WEIGHTS` in `predict.py` to `"./tensorized_models/oasst-sft-1-pythia-12b.tensors"`.
 
 ## Step 2: Run the model
-
 
 You can run the model locally to test it:
 
@@ -79,7 +78,6 @@ cog push r8.im/username/modelname
 ```
 
 [Learn more about pushing models to Replicate.](https://replicate.com/docs/guides/push-a-model)
-
 
 ## Step 6: Run the model on Replicate
 
