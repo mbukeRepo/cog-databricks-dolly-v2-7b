@@ -39,9 +39,9 @@ chmod +x ./scripts/tensorize_model.py
 cog run ./scripts/tensorize_model.py
 ```
 
-This will load the model in fp16 and then use `tensorizer` to export it to `./tensorized_models/oasst-sft-1-pythia-12b.tensors`.
+This will load the model in fp16 and then use `tensorizer` to export it to `./tensorized_models/databricks-dolly-v2-7b.tensors`.
 
-To use these weights, comment out `tensorized_models` in `.dockerignore` and set `PATH_TO_TENSORIZER_WEIGHTS` in `predict.py` to `"./tensorized_models/oasst-sft-1-pythia-12b.tensors"`.
+To use these weights, comment out `tensorized_models` in `.dockerignore` and set `PATH_TO_TENSORIZER_WEIGHTS` in `predict.py` to `"./tensorized_models/databricks-dolly-v2-7b.tensors"`.
 
 ## Step 2: Run the model
 
