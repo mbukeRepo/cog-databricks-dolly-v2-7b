@@ -87,4 +87,4 @@ To use your model in the browser, go to your model page.
 
 To use your model with an API, click on the "API" tab on your model page. You'll see commands to run the model with cURL, Python, etc.
 
-To learn more about how to use Replicate, [check out our documentation](https://replicate.com/docs).# cog-databricks-dolly-v2-7b
+To learn more about how to use Replicate, [check out our documentation](https://replicate.com/docs).
